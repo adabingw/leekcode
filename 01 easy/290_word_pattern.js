@@ -8,6 +8,7 @@ var wordPattern = function(pattern, s) {
     let s_arr = s.split(" ");
 
     if (s_arr.length !== pattern.length) return false;
+    if (new Set (pattern.split("")).size !== new Set(s_arr).size) return false;
 
     for (var i = 0; i < pattern.length; i++) {
         if ((pattern_map[pattern[i]])) {
