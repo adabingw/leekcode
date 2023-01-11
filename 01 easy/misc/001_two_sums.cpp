@@ -16,9 +16,8 @@ public:
                     breaks = true;
                     break;
                 }
-            } if (breaks == true) {
-                    break;
-                }
+            } 
+            if (breaks) break;
         }
         return result;
     }
