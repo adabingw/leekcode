@@ -1,0 +1,18 @@
+
+
+
+SEARCH PROBLEMS: 
+
+DATA: 
+    * graph form: graph = [[1,2],[3],[3],[]]
+                    where graph[i] are the nodes that node i can access 
+    * grid form: grid = [[1,0,0,0],[0,0,0,0],[0,0,0,2]]
+                    where graph[i] can go up, down, left, and right 
+
+RESULTS: 
+    * paths 
+    * cost 
+
+DFS: 
+    GRAPH FORM: 
+        * 
