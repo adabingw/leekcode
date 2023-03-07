@@ -6,15 +6,25 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
+
 class Solution {
 public:
-    ListNode* middleNode(ListNode* head) {
+    ListNode* deleteMiddle(ListNode* head) {
+        if (!head || !head->next) return nullptr;
+        if (!head->next->next) {
+            head->next = nullptr; 
+            return head;
+        }
+
         ListNode* slow = head; 
-        ListNode* fast = head; 
+        ListNode* fast = head->next->next;
+
         while (fast && fast->next) {
             slow = slow->next; 
             fast = fast->next->next;
         }
-        return slow;
+
+        slow->next = slow->next->next;
+        return head;
     }
 };

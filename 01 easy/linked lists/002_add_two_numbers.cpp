@@ -6,7 +6,6 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -14,7 +13,7 @@ public:
         if (l1 == nullptr) return l2; 
         if (l2 == nullptr) return l1; 
 
-        ListNode* root = new ListNode(); 
+        ListNode* root = new ListNode(0); 
         ListNode* temp = root; 
 
         int carry = 0; 

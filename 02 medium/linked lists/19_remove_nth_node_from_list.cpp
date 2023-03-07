@@ -8,27 +8,15 @@ struct ListNode {
 
 class Solution {
 public:
+    int curr = 0;
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        if (head->next == nullptr) return nullptr;
-        
-        ListNode* temp = head; 
-        int t = 0;
+        if (head == nullptr) {
+            curr++; 
+            return nullptr;
+        }
 
-        while (temp->next != nullptr) {
-            temp = temp->next; 
-            t++;
-        }
-        
-        ListNode* curr = head;
-                
-        if (t + 1 == n) {
-            head = head->next;
-            return head;
-        }
-        
-        for (int i = 0; i < t - n; i++) curr = curr->next; 
-        
-        curr->next = curr->next->next;
-        return head;
+        head->next = removeNthFromEnd(head->next, n); 
+        curr++; 
+        return curr - 1 == n ? head->next : head;
     }
 };

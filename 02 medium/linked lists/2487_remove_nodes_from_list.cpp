@@ -8,9 +8,9 @@ struct ListNode {
 
 class Solution {
 public:
-    ListNode* removeElements(ListNode* head, int val) {
-        if (head == nullptr) return nullptr; 
-        head->next = removeElements(head->next, val); 
-        return head->val == val ? head->next : head;
+    ListNode* removeNodes(ListNode* head) {
+        if (!head) return nullptr;
+        head->next = removeNodes(head->next); 
+        return head->next && (head->next->val > head->val) ? head->next : head;
     }
 };

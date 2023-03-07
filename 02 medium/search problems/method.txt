@@ -16,3 +16,7 @@ RESULTS:
 DFS: 
     GRAPH FORM: 
         * 
+
+BFS: 
+
+DIJKSTRA: 
