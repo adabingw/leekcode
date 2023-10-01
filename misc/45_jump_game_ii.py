@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: int
         """
         answer = 0
-        max_jump = 0
 
         curr_end, curr_far = 0, 0
 
