@@ -17,7 +17,7 @@ class Solution:
                 if int(s[start : end + 1]) > k: 
                     break
                 count += dfs(end + 1)
-            
+        
             dp[start] = count % mod
             return count
         
