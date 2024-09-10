@@ -4,7 +4,6 @@ class Solution(object):
         :type grid: List[List[int]]
         :rtype: int
         """
-        result = 10000000
         t = 0
         n = len(grid)
         m = len(grid[0])
